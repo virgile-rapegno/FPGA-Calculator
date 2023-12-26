@@ -1,0 +1,822 @@
+Analysis & Synthesis report for CPU
+Tue Jan 31 20:34:09 2023
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div1
+ 13. Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div2
+ 14. Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult0
+ 15. Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult1
+ 16. Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult2
+ 17. lpm_mult Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "dig2dec:b2v_inst5"
+ 19. Port Connectivity Checks: "Fetch:fetch_inst"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 31 20:34:09 2023       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; CPU                                         ;
+; Top-level Entity Name              ; CPU                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 367                                         ;
+;     Total combinational functions  ; 356                                         ;
+;     Dedicated logic registers      ; 33                                          ;
+; Total registers                    ; 33                                          ;
+; Total pins                         ; 71                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 6                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; CPU                ; CPU                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Restructure Multiplexers                                         ; Off                ; Auto               ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; register_file.vhd                ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/register_file.vhd          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd                    ;         ;
+; Rom.vhd                          ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd                    ;         ;
+; Fetch.vhd                        ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Fetch.vhd                  ;         ;
+; dig2dec.vhd                      ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd                ;         ;
+; SEG7_LUT.vhd                     ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/SEG7_LUT.vhd               ;         ;
+; Event_Detect.vhd                 ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Event_Detect.vhd           ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File               ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd                    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_divide.tdf                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/abs_divider.inc                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sign_div_unsign.inc                   ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                        ;         ;
+; db/lpm_divide_otl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_otl.tdf      ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_qlh.tdf ;         ;
+; db/alt_u_div_uhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_uhe.tdf       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/add_sub_u3c.tdf         ;         ;
+; db/lpm_divide_ltl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_ltl.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_ohe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ohe.tdf       ;         ;
+; db/lpm_divide_itl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_itl.tdf      ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_klh.tdf ;         ;
+; db/alt_u_div_ihe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ihe.tdf       ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf                          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc                       ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc                          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc                          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc                          ;         ;
+; db/mult_bgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/mult_bgs.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 367                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 356                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 143                      ;
+;     -- 3 input functions                    ; 104                      ;
+;     -- <=2 input functions                  ; 109                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 248                      ;
+;     -- arithmetic mode                      ; 108                      ;
+;                                             ;                          ;
+; Total registers                             ; 33                       ;
+;     -- Dedicated logic registers            ; 33                       ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 71                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 6                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; rom:rom_inst|Data_out[0] ;
+; Maximum fan-out                             ; 60                       ;
+; Total fan-out                               ; 1368                     ;
+; Average fan-out                             ; 2.55                     ;
++---------------------------------------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |CPU                                      ; 356 (16)            ; 33 (0)                    ; 0           ; 0          ; 6            ; 0       ; 3         ; 71   ; 0            ; 0          ; |CPU                                                                                                                   ; CPU                 ; work         ;
+;    |Event_Detect:Event_Detect_inst|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|Event_Detect:Event_Detect_inst                                                                                    ; Event_Detect        ; work         ;
+;    |Fetch:fetch_inst|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|Fetch:fetch_inst                                                                                                  ; Fetch               ; work         ;
+;    |SEG7_LUT:b2v_inst2|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|SEG7_LUT:b2v_inst2                                                                                                ; SEG7_LUT            ; work         ;
+;    |SEG7_LUT:b2v_inst3|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|SEG7_LUT:b2v_inst3                                                                                                ; SEG7_LUT            ; work         ;
+;    |SEG7_LUT:b2v_inst4|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|SEG7_LUT:b2v_inst4                                                                                                ; SEG7_LUT            ; work         ;
+;    |alu:alu_inst|                         ; 153 (153)           ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst                                                                                                      ; alu                 ; work         ;
+;       |lpm_mult:Mult0|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult0                                                                                       ; lpm_mult            ; work         ;
+;          |mult_bgs:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult0|mult_bgs:auto_generated                                                               ; mult_bgs            ; work         ;
+;       |lpm_mult:Mult1|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult1                                                                                       ; lpm_mult            ; work         ;
+;          |mult_bgs:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult1|mult_bgs:auto_generated                                                               ; mult_bgs            ; work         ;
+;       |lpm_mult:Mult2|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult2                                                                                       ; lpm_mult            ; work         ;
+;          |mult_bgs:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |CPU|alu:alu_inst|lpm_mult:Mult2|mult_bgs:auto_generated                                                               ; mult_bgs            ; work         ;
+;    |dig2dec:b2v_inst5|                    ; 146 (12)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5                                                                                                 ; dig2dec             ; work         ;
+;       |lpm_divide:Div0|                   ; 82 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_otl:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                   ; lpm_divide_otl      ; work         ;
+;             |sign_div_unsign_qlh:divider| ; 82 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
+;                |alt_u_div_uhe:divider|    ; 82 (82)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider ; alt_u_div_uhe       ; work         ;
+;       |lpm_divide:Div1|                   ; 47 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ltl:auto_generated|  ; 47 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated                                                   ; lpm_divide_ltl      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 47 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_ohe:divider|    ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_ohe:divider ; alt_u_div_ohe       ; work         ;
+;       |lpm_divide:Div2|                   ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_itl:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div2|lpm_divide_itl:auto_generated                                                   ; lpm_divide_itl      ; work         ;
+;             |sign_div_unsign_klh:divider| ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div2|lpm_divide_itl:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;                |alt_u_div_ihe:divider|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|dig2dec:b2v_inst5|lpm_divide:Div2|lpm_divide_itl:auto_generated|sign_div_unsign_klh:divider|alt_u_div_ihe:divider ; alt_u_div_ihe       ; work         ;
+;    |register_file:register_file_inst|     ; 2 (2)               ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|register_file:register_file_inst                                                                                  ; register_file       ; work         ;
+;    |rom:rom_inst|                         ; 9 (9)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CPU|rom:rom_inst                                                                                                      ; rom                 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 3           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 17:1               ; 10 bits   ; 110 LEs       ; 80 LEs               ; 30 LEs                 ; No         ; |CPU|alu:alu_inst|Data_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_otl ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_ltl ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dig2dec:b2v_inst5|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_itl ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult0    ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult1    ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:alu_inst|lpm_mult:Mult2    ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                      ;
++---------------------------------------+-----------------------------+
+; Name                                  ; Value                       ;
++---------------------------------------+-----------------------------+
+; Number of entity instances            ; 3                           ;
+; Entity Instance                       ; alu:alu_inst|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 10                          ;
+;     -- LPM_WIDTHB                     ; 10                          ;
+;     -- LPM_WIDTHP                     ; 20                          ;
+;     -- LPM_REPRESENTATION             ; SIGNED                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                          ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                          ;
+;     -- USE_EAB                        ; OFF                         ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
+; Entity Instance                       ; alu:alu_inst|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 10                          ;
+;     -- LPM_WIDTHB                     ; 10                          ;
+;     -- LPM_WIDTHP                     ; 20                          ;
+;     -- LPM_REPRESENTATION             ; SIGNED                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                          ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                          ;
+;     -- USE_EAB                        ; OFF                         ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
+; Entity Instance                       ; alu:alu_inst|lpm_mult:Mult2 ;
+;     -- LPM_WIDTHA                     ; 10                          ;
+;     -- LPM_WIDTHB                     ; 10                          ;
+;     -- LPM_WIDTHP                     ; 20                          ;
+;     -- LPM_REPRESENTATION             ; SIGNED                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                          ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                          ;
+;     -- USE_EAB                        ; OFF                         ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
++---------------------------------------+-----------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "dig2dec:b2v_inst5" ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; vol[15..10] ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "Fetch:fetch_inst" ;
++---------+-------+----------+-----------------+
+; Port    ; Type  ; Severity ; Details         ;
++---------+-------+----------+-----------------+
+; pc_load ; Input ; Info     ; Stuck at GND    ;
+; pc_jump ; Input ; Info     ; Stuck at GND    ;
++---------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 71                          ;
+; cycloneiii_ff         ; 33                          ;
+;     ENA CLR           ; 32                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 363                         ;
+;     arith             ; 108                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 73                          ;
+;     normal            ; 255                         ;
+;         0 data inputs ; 14                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 143                         ;
+; cycloneiii_mac_mult   ; 3                           ;
+; cycloneiii_mac_out    ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 23.50                       ;
+; Average LUT depth     ; 11.29                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Jan 31 20:33:54 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info (12022): Found design unit 1: register_file-Behavioral File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/register_file.vhd Line: 21
+    Info (12023): Found entity 1: register_file File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/register_file.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-Behavioral File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 21
+    Info (12023): Found entity 1: alu File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-rom_a File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 16
+    Info (12023): Found entity 1: rom File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fetch.vhd
+    Info (12022): Found design unit 1: Fetch-Fetch_a File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Fetch.vhd Line: 19
+    Info (12023): Found entity 1: Fetch File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Fetch.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file dig2dec.vhd
+    Info (12022): Found design unit 1: dig2dec-rtl File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 16
+    Info (12023): Found entity 1: dig2dec File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file seg7_lut.vhd
+    Info (12022): Found design unit 1: SEG7_LUT-rtl File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/SEG7_LUT.vhd Line: 12
+    Info (12023): Found entity 1: SEG7_LUT File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/SEG7_LUT.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file event_detect.vhd
+    Info (12022): Found design unit 1: Event_Detect-Event_a File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Event_Detect.vhd Line: 15
+    Info (12023): Found entity 1: Event_Detect File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Event_Detect.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: CPU-bdf_type File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 29
+    Info (12023): Found entity 1: CPU File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 8
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(104): object "one" assigned a value but never read File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 104
+Info (12128): Elaborating entity "Event_Detect" for hierarchy "Event_Detect:Event_Detect_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 139
+Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at Rom.vhd(34): signal "Data_Rom" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at Rom.vhd(36): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 36
+Warning (10631): VHDL Process Statement warning at Rom.vhd(22): inferring latch(es) for signal or variable "Data_Rom", which holds its previous value in one or more paths through the process File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Warning (10873): Using initial value X (don't care) for net "Data_Rom[8..255]" at Rom.vhd(19) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 19
+Info (10041): Inferred latch for "Data_Rom[7][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[7][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[7][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[7][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[6][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[6][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[6][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[6][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[5][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[5][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[5][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[5][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[4][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[4][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[4][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[4][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[3][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[3][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[3][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[3][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[2][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[2][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[2][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[2][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[1][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[1][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[1][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[1][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[0][0]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[0][1]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[0][2]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (10041): Inferred latch for "Data_Rom[0][3]" at Rom.vhd(22) File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/Rom.vhd Line: 22
+Info (12128): Elaborating entity "Fetch" for hierarchy "Fetch:fetch_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 156
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 166
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 177
+Warning (10492): VHDL Process Statement warning at ALU.vhd(32): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at ALU.vhd(34): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at ALU.vhd(36): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at ALU.vhd(36): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at ALU.vhd(38): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at ALU.vhd(38): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at ALU.vhd(40): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at ALU.vhd(51): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "Data_in_imm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at ALU.vhd(63): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "Data_in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "Data_in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 65
+Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT:b2v_inst" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 188
+Info (12128): Elaborating entity "dig2dec" for hierarchy "dig2dec:b2v_inst5" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 218
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "dig2dec:b2v_inst5|Div0" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "dig2dec:b2v_inst5|Div1" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "dig2dec:b2v_inst5|Div2" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 26
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "alu:alu_inst|Mult0" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 44
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "alu:alu_inst|Mult1" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 61
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "alu:alu_inst|Mult2" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 65
+Info (12130): Elaborated megafunction instantiation "dig2dec:b2v_inst5|lpm_divide:Div0" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 24
+Info (12133): Instantiated megafunction "dig2dec:b2v_inst5|lpm_divide:Div0" with the following parameter: File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 24
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_otl.tdf
+    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_otl.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_qlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uhe.tdf
+    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_uhe.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/add_sub_t3c.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/add_sub_u3c.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "dig2dec:b2v_inst5|lpm_divide:Div1" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 25
+Info (12133): Instantiated megafunction "dig2dec:b2v_inst5|lpm_divide:Div1" with the following parameter: File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 25
+    Info (12134): Parameter "LPM_WIDTHN" = "13"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ltl.tdf
+    Info (12023): Found entity 1: lpm_divide_ltl File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_ltl.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ohe.tdf
+    Info (12023): Found entity 1: alt_u_div_ohe File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ohe.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "dig2dec:b2v_inst5|lpm_divide:Div2" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 26
+Info (12133): Instantiated megafunction "dig2dec:b2v_inst5|lpm_divide:Div2" with the following parameter: File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/dig2dec.vhd Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_itl.tdf
+    Info (12023): Found entity 1: lpm_divide_itl File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/lpm_divide_itl.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/sign_div_unsign_klh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ihe.tdf
+    Info (12023): Found entity 1: alt_u_div_ihe File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ihe.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "alu:alu_inst|lpm_mult:Mult0" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 44
+Info (12133): Instantiated megafunction "alu:alu_inst|lpm_mult:Mult0" with the following parameter: File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/ALU.vhd Line: 44
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bgs.tdf
+    Info (12023): Found entity 1: mult_bgs File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/mult_bgs.tdf Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 12
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 13
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 14
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 15
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 15
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 15
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 15
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 16
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.vhd Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_ohe:divider|add_sub_9_result_int[0]~10" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ohe.tdf Line: 86
+    Info (17048): Logic cell "dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_ohe:divider|add_sub_10_result_int[0]~10" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ohe.tdf Line: 36
+    Info (17048): Logic cell "dig2dec:b2v_inst5|lpm_divide:Div1|lpm_divide_ltl:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_ohe:divider|add_sub_11_result_int[0]~10" File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/db/alt_u_div_ohe.tdf Line: 41
+Info (128000): Starting physical synthesis optimizations for speed
+Info (332104): Reading SDC File: 'CPU.sdc'
+Warning (332174): Ignored filter at CPU.sdc(9): ADC_CLOCK_10 could not be matched with a port File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 9
+Warning (332049): Ignored create_clock at CPU.sdc(9): Argument <targets> is an empty collection File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 9
+    Info (332050): create_clock -period "10.0 MHz" [get_ports ADC_CLOCK_10] File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 9
+Warning (332174): Ignored filter at CPU.sdc(11): MAX10_CLK2_50 could not be matched with a port File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 11
+Warning (332049): Ignored create_clock at CPU.sdc(11): Argument <targets> is an empty collection File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 11
+    Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK2_50] File: C:/Users/virgi/Desktop/Rapegno_Virgile_Ferreira_Nathan_Projet_ASN/CPU.sdc Line: 11
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000 MAX10_CLK1_50
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 454 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 377 logic cells
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Tue Jan 31 20:34:09 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
+
+

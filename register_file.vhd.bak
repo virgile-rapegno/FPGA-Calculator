@@ -1,0 +1,52 @@
+library ieee;
+
+use IEEE.STD_LOGIC_1164.ALL;
+Use ieee.numeric_std.all ;
+
+
+entity register_file is
+	port(
+			clk		:	in std_logic;
+			rst		:	in std_logic;
+			sel		:	in std_logic;
+			Data_in  : in std_logic_vector(7 downto 0);
+			Data_out_A:	out std_logic_vector(7 downto 0);
+			Data_out_B:	out std_logic_vector(7 downto 0);
+			);
+			
+end register_file;
+
+architecture Behavioral of register_file is
+
+type registerFile is array(0 to 1) of std_logic_vector(7 downto 0);
+signal output : registerFile;
+
+begin
+
+	save:process(rst,clk)
+	begin
+	
+	if (rst = '1') then
+		output <= "00";
+	
+	case(sel)
+		when '0' =>
+			output(0) <= Date_in;
+		when '1' =>
+			output(1) <= Data_in;
+			
+	end process;
+	
+	
+	
+	give_outputs:process(clk)
+	begin
+		
+		Data_out_A <= output(0);
+		Data_out_B <= output(1);
+		
+	end process;
+	
+	
+	
+end Behavioral;

@@ -1,0 +1,59 @@
+library ieee;
+
+use IEEE.STD_LOGIC_1164.ALL;
+Use ieee.numeric_std.all ;
+
+
+entity alu is
+	port(
+			sel		:	in std_logic_vector(3 downto 0);
+			clk		:	in std_logic;
+			rst		:	in std_logic;
+			Data_in_imm: in std_logic_vector(7 downto 0);
+			Data_in_A:	in std_logic_vector(7 downto 0);
+			Data_in_B:	in std_logic_vector(7 downto 0);
+			Data_out :  out std_logic_vector(7 downto 0)
+			);
+end alu;
+
+architecture Behavioral of alu is
+
+signal res of std_logic_vector(7 downto 0);
+
+begin
+	adder:process(rst,clk)
+	begin
+	case(sel) is
+		when "0000" =>
+			res <= Data_in_imm;
+		when "0001" =>
+			res <= Data_in_A + Data_in_imm;
+		when "0010" =>
+			res <= Data_in_A - Data_in_imm;
+		when "0011" =>
+			res <= Data_in_B + Data_in_imm;
+		when "0011" =>
+			res <= Data_in_B - Data_in_imm;
+			
+		when "1000" =>
+			res <= - Data_in_A;
+		when "1001" =>
+			res <= x"00";
+		when "1010" =>
+			res <= Data_in_A + Data_in_A;
+		when "1011" =>
+			res <= Data_in_A;
+		when "1100" =>
+			res <= Data_in_B;
+		when "1101" =>
+			res <= x"00";
+		when "1110" =>
+			res <= Data_in_B + Data_in_B;
+		when others =>
+			res <= x"00";
+	end case;
+	end process;
+	
+	Data_out <= res;
+	
+end Behavioral;

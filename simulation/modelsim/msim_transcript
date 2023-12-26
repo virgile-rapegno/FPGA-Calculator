@@ -1,0 +1,317 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do CPU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_file
+# -- Compiling architecture Behavioral of register_file
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture Behavioral of alu
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/Rom.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/Rom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom
+# -- Compiling architecture rom_a of rom
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/Fetch.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/Fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Fetch
+# -- Compiling architecture Fetch_a of Fetch
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/dig2dec.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/dig2dec.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dig2dec
+# -- Compiling architecture rtl of dig2dec
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/SEG7_LUT.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/SEG7_LUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SEG7_LUT
+# -- Compiling architecture rtl of SEG7_LUT
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/Event_Detect.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/Event_Detect.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Event_Detect
+# -- Compiling architecture Event_a of Event_Detect
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/virgi/Desktop/test/CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:24:20 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CPU
+# -- Compiling architecture bdf_type of CPU
+# End time: 19:24:20 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.cpu
+# vsim work.cpu 
+# Start time: 19:25:43 on Jan 31,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(bdf_type)
+# Loading work.event_detect(event_a)
+# Loading work.rom(rom_a)
+# Loading work.fetch(fetch_a)
+# Loading work.register_file(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.seg7_lut(rtl)
+# Loading work.dig2dec(rtl)
+add wave -position end  sim:/cpu/MAX10_CLK1_50
+add wave -position end  sim:/cpu/SW
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: virgi  Hostname: DESKTOP-68N2H1M  ProcessID: 2148
+#           Attempting to use alternate WLF file "./wlftw2bnz3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftw2bnz3
+add wave -position end  sim:/cpu/PUSH
+add wave -position end  sim:/cpu/NOT_RESET
+add wave -position end  sim:/cpu/dataA_from_register
+add wave -position end  sim:/cpu/dataB_from_register
+force -freeze sim:/cpu/MAX10_CLK1_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/cpu/PUSH 1 0
+force -freeze sim:/cpu/NOT_RESET 0 0
+force -freeze sim:/cpu/SW 0000000001 0
+run
+force -freeze sim:/cpu/NOT_RESET 1 0
+run
+force -freeze sim:/cpu/PUSH 1 0, 0 {50 ps} -r 100
+run
+run
+force -freeze sim:/cpu/SW 0000001000 0
+run
+run
+run
+run
+run
+restart
+vcom -93 -work work C:/Users/virgi/Desktop/test/Rom.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:31:37 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/Rom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom
+# -- Compiling architecture rom_a of rom
+# End time: 19:31:37 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -93 -work work C:/Users/virgi/Desktop/test/CPU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:31:41 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CPU
+# -- Compiling architecture bdf_type of CPU
+# End time: 19:31:41 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.cpu
+# End time: 19:31:46 on Jan 31,2023, Elapsed time: 0:06:03
+# Errors: 0, Warnings: 2
+# vsim work.cpu 
+# Start time: 19:31:46 on Jan 31,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(bdf_type)
+# Loading work.event_detect(event_a)
+# Loading work.rom(rom_a)
+# Loading work.fetch(fetch_a)
+# Loading work.register_file(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.seg7_lut(rtl)
+# Loading work.dig2dec(rtl)
+vcom -93 -work work C:/Users/virgi/Desktop/test/Rom.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:32:05 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/Rom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom
+# -- Compiling architecture rom_a of rom
+# End time: 19:32:05 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -93 -work work C:/Users/virgi/Desktop/test/CPU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:32:09 on Jan 31,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/virgi/Desktop/test/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CPU
+# -- Compiling architecture bdf_type of CPU
+# End time: 19:32:09 on Jan 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.cpu
+# End time: 19:32:14 on Jan 31,2023, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 0
+# vsim work.cpu 
+# Start time: 19:32:14 on Jan 31,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu(bdf_type)
+# Loading work.event_detect(event_a)
+# Loading work.rom(rom_a)
+# Loading work.fetch(fetch_a)
+# Loading work.register_file(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.seg7_lut(rtl)
+# Loading work.dig2dec(rtl)
+add wave -position end  sim:/cpu/MAX10_CLK1_50
+add wave -position end  sim:/cpu/SW
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: virgi  Hostname: DESKTOP-68N2H1M  ProcessID: 2148
+#           Attempting to use alternate WLF file "./wlftfiv84n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfiv84n
+add wave -position end  sim:/cpu/PUSH
+add wave -position end  sim:/cpu/NOT_RESET
+add wave -position end  sim:/cpu/dataA_from_register
+add wave -position end  sim:/cpu/dataB_from_register
+force -freeze sim:/cpu/MAX10_CLK1_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/cpu/PUSH 1 0
+force -freeze sim:/cpu/NOT_RESET 0 0
+force -freeze sim:/cpu/SW 0000000001 0
+run
+force -freeze sim:/cpu/NOT_RESET 1 0
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/SW 0000001000 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+restart
+force -freeze sim:/cpu/MAX10_CLK1_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/cpu/PUSH 1 0
+force -freeze sim:/cpu/NOT_RESET 0 0
+force -freeze sim:/cpu/SW 0000000001 0
+run
+force -freeze sim:/cpu/NOT_RESET 1 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/SW 0000001000 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/SW 0000100000 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+run
+noforce sim:/cpu/PUSH
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/SW 0000010000 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/SW 0000000000 0
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+force -freeze sim:/cpu/PUSH 0 0
+run
+force -freeze sim:/cpu/PUSH 1 0
+run
+run
+run

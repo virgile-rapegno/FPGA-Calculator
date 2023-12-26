@@ -1,0 +1,338 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/virgi/Desktop/test/simulation/modelsim
+Ealu
+Z1 w1675186511
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/virgi/Desktop/test/ALU.vhd
+Z6 FC:/Users/virgi/Desktop/test/ALU.vhd
+l0
+L6
+VIX25d5:hH]:fnUZ;T?fPA2
+!s100 44Q?mk3c;@bf:z1TQm9nM3
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1675189460
+!i10b 1
+Z9 !s108 1675189460.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/ALU.vhd|
+Z11 !s107 C:/Users/virgi/Desktop/test/ALU.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 IX25d5:hH]:fnUZ;T?fPA2
+l25
+L21
+V7z38L`CTLPo;@Gz1k^?ck3
+!s100 KgWD63:GRbU7PlYSJ>K?H2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecpu
+Z14 w1675184090
+R2
+R3
+R4
+R0
+Z15 8C:/Users/virgi/Desktop/test/CPU.vhd
+Z16 FC:/Users/virgi/Desktop/test/CPU.vhd
+l0
+L8
+V:a;13c2FfS_FSYK;akVaD3
+!s100 j?1c`@Oh=XJY`j>^bGd9g0
+R7
+31
+Z17 !s110 1675189929
+!i10b 1
+Z18 !s108 1675189929.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/CPU.vhd|
+Z20 !s107 C:/Users/virgi/Desktop/test/CPU.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R2
+R3
+R4
+Z21 DEx4 work 3 cpu 0 22 :a;13c2FfS_FSYK;akVaD3
+l138
+L29
+Z22 VXUjSiROB0>2?Hg@=aZUna2
+Z23 !s100 F[<;KN:Y10<4RoV<b<0912
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Edig2dec
+Z24 w1675177199
+R2
+R3
+R4
+R0
+Z25 8C:/Users/virgi/Desktop/test/dig2dec.vhd
+Z26 FC:/Users/virgi/Desktop/test/dig2dec.vhd
+l0
+L5
+VdmMbK@lAzm1dDzlCZi@2I3
+!s100 CXH=jE<U95P?mcRdTP0V[3
+R7
+31
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/dig2dec.vhd|
+Z28 !s107 C:/Users/virgi/Desktop/test/dig2dec.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 7 dig2dec 0 22 dmMbK@lAzm1dDzlCZi@2I3
+l17
+L16
+V^`8:VQ?LU^OFPaZ>aE@=z3
+!s100 2LWH2@57lbdj=UK>m0VB[3
+R7
+31
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Eevent_detect
+Z29 w1675177232
+R2
+R3
+R4
+R0
+Z30 8C:/Users/virgi/Desktop/test/Event_Detect.vhd
+Z31 FC:/Users/virgi/Desktop/test/Event_Detect.vhd
+l0
+L6
+V_o8nPBZRM773T5Xec37Aj2
+!s100 kVVkB0n1;RL4IJ;J3MU<62
+R7
+31
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/Event_Detect.vhd|
+Z33 !s107 C:/Users/virgi/Desktop/test/Event_Detect.vhd|
+!i113 1
+R12
+R13
+Aevent_a
+R2
+R3
+R4
+DEx4 work 12 event_detect 0 22 _o8nPBZRM773T5Xec37Aj2
+l19
+L15
+VYf?mo0mATRaBim70QiOi[3
+!s100 mGjoWBj;C8C9aVHW7OfZi3
+R7
+31
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12
+R13
+Efetch
+Z34 w1675183827
+R2
+R3
+R4
+R0
+Z35 8C:/Users/virgi/Desktop/test/Fetch.vhd
+Z36 FC:/Users/virgi/Desktop/test/Fetch.vhd
+l0
+L6
+Vj?iSXc941B25_Q[c>;nm80
+!s100 RV8_PJBR51V@2_oacQ8KK0
+R7
+31
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/Fetch.vhd|
+Z38 !s107 C:/Users/virgi/Desktop/test/Fetch.vhd|
+!i113 1
+R12
+R13
+Afetch_a
+R2
+R3
+R4
+DEx4 work 5 fetch 0 22 j?iSXc941B25_Q[c>;nm80
+l23
+L19
+VX6g[cOJJn?]dWai>SP]JY0
+!s100 fe[08[ih>G^<X:KVkhT0g3
+R7
+31
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13
+Eregister_file
+Z39 w1675183249
+R2
+R3
+R4
+R0
+Z40 8C:/Users/virgi/Desktop/test/register_file.vhd
+Z41 FC:/Users/virgi/Desktop/test/register_file.vhd
+l0
+L6
+VYzibA:VBM[=kTnMEU0_IJ0
+!s100 8Qci1`6`X=3NmWT>aUn742
+R7
+31
+R8
+!i10b 1
+R9
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/register_file.vhd|
+Z43 !s107 C:/Users/virgi/Desktop/test/register_file.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 YzibA:VBM[=kTnMEU0_IJ0
+l26
+L21
+VHi^aVkAaWHVeDgb`nRGX?3
+!s100 m7[ZniLl?Ad`H<Y]b_QE70
+R7
+31
+R8
+!i10b 1
+R9
+R42
+R43
+!i113 1
+R12
+R13
+Erom
+Z44 w1675189913
+R2
+R3
+R4
+R0
+Z45 8C:/Users/virgi/Desktop/test/Rom.vhd
+Z46 FC:/Users/virgi/Desktop/test/Rom.vhd
+l0
+L6
+VP;NN]>n<e<T[01`V=N`;I2
+!s100 oAG[k1GHm1>>zmOzNGDko0
+R7
+31
+Z47 !s110 1675189925
+!i10b 1
+Z48 !s108 1675189925.000000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/Rom.vhd|
+Z50 !s107 C:/Users/virgi/Desktop/test/Rom.vhd|
+!i113 1
+R12
+R13
+Arom_a
+R2
+R3
+R4
+DEx4 work 3 rom 0 22 P;NN]>n<e<T[01`V=N`;I2
+l21
+L16
+VE31Um52=lfGZ8k7?37Maa3
+!s100 mI[Y;mnV5=56^;L39:RN93
+R7
+31
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R12
+R13
+Eseg7_lut
+Z51 w1675177266
+R2
+R3
+R4
+R0
+Z52 8C:/Users/virgi/Desktop/test/SEG7_LUT.vhd
+Z53 FC:/Users/virgi/Desktop/test/SEG7_LUT.vhd
+l0
+L5
+V?7EomKU9f_LfIbSN^V]i63
+!s100 iWngG];2^:H0>GlLZHIG[0
+R7
+31
+R8
+!i10b 1
+R9
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/virgi/Desktop/test/SEG7_LUT.vhd|
+Z55 !s107 C:/Users/virgi/Desktop/test/SEG7_LUT.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 8 seg7_lut 0 22 ?7EomKU9f_LfIbSN^V]i63
+l13
+L12
+VFNXCA]6[DejGUJ3kBJNN`0
+!s100 ^H`QI=hH?[oRVKC9;W@KE1
+R7
+31
+R8
+!i10b 1
+R9
+R54
+R55
+!i113 1
+R12
+R13

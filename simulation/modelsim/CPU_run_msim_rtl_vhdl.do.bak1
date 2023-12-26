@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/register_file.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/ALU.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/Rom.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/Fetch.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/dig2dec.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/SEG7_LUT.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/Event_Detect.vhd}
+vcom -93 -work work {C:/Users/virgi/Desktop/projet_ASN/CPU.vhd}
+
